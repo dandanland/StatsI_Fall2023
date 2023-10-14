@@ -5,22 +5,17 @@ setwd("/Users/danzhang/Documents/GitHub/StatsI_Fall2023/problemSets/PS02/my_answ
 ## Q1-a ##
 #create the resulting data table
 resulting_data<-matrix(c(14,6,7,7,7,1),nrow = 2,byrow = TRUE)
-colnames(resulting_data)<-c("Not Stopped","Bribe requested","Stopped/given warning")
-rownames(resulting_data)<-c("Upper class","Lower class")
 
 #calculate the expected frequencies
-calculate_expected_freq<-function(data_table){
   #calculate the sum of rows and columns of the data table
-  total_samples<-sum(data_table)
-  row_sums<-rowSums(data_table)
-  col_sums<-colSums(data_table)
+  total_samples<-sum(resulting_data)
+  row_sums<-rowSums(resulting_data)
+  col_sums<-colSums(resulting_data)
   #calculate the frequencies
   expected_freq<-outer(row_sums,col_sums)/total_samples
-  return(expected_freq)
-  }
   
 #calculate Chi square statistic
-chi_square_statistic<-sum((resulting_data - calculate_expected_freq(resulting_data))^2/calculate_expected_freq(resulting_data))
+chi_square_statistic<-sum((resulting_data - expected_freq)^2/expected_freq)
 
 #calculate degree of freedom
 degree_of_freedom<-(nrow(resulting_data)-1)*(ncol(resulting_data)-1)
@@ -51,8 +46,19 @@ if (p_value<alpha){
 
 ## Q1-c ##
 #calculate the standardized residuals for each cell
-residuals_for_cell<-(resulting_data - calculate_expected_freq(resulting_data))/sqrt(calculate_expected_freq(resulting_data))
-residuals_for_cell
+cell_residuals<-c()
+cell_residual<-0
+row_sums[[2]]
+for (i in seq(1:nrow(resulting_data))){
+  for (j in seq(1:ncol(resulting_data))){
+    cell_residual<-(resulting_data[i,j]-expected_freq[i,j])/sqrt(expected_freq[i,j]*(1-row_sums[i])/sum(resulting_data)*(1-col_sums[j])/sum(resulting_data))
+    cell_residuals<-c(cell_residuals,cell_residual)
+  }
+}
+cell_residuals_table<-matrix(cell_residuals,nrow = 2,byrow = TRUE)
+colnames(cell_residuals_table)<-c("Not Stopped","Bribe requested","Stopped/given warning")
+rownames(cell_residuals_table)<-c("Upper class","Lower class")
+cell_residuals_table
 
 ## Q1-c ##
 'A standardized residual with a larger absolute value indicates that a cell contributes more significantly to the chi-square statistic.

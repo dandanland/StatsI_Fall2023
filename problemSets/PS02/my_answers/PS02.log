@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.27)  14 OCT 2023 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.27)  15 OCT 2023 00:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,14 +917,6 @@ File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 7.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-2.
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
@@ -935,12 +927,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-(./P02.R) [2]
+(./P02.R)
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 128--131
 
  []
@@ -960,7 +952,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-(./P02.R)
+(./P02.R
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
+2.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+)
 Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
@@ -970,12 +970,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
 
-[4]
+[4] [5]
 Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-<women_desc.png, id=95, 750.805pt x 300.12125pt>
+<women_desc.png, id=93, 750.805pt x 300.12125pt>
 File: women_desc.png Graphic file (type png)
 <use women_desc.png>
 Package pdftex.def Info: women_desc.png  used on input line 189.
@@ -985,7 +985,7 @@ Overfull \hbox (46.97836pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
-[5 <./women_desc.png>]
+[6 <./women_desc.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 197--200
 
  []
@@ -995,7 +995,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--200
 
  []
 
-(./P02.R) [6]
+(./P02.R) [7]
 Underfull \hbox (badness 10000) in paragraph at lines 226--228
 
  []
@@ -1005,15 +1005,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--228
 
  []
 
-[7] (./PS02.aux)
+[8] (./PS02.aux)
 Package rerunfilecheck Info: File `PS02.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27136 strings out of 476025
- 477245 string characters out of 5790017
- 2025388 words of memory out of 5000000
- 47019 multiletter control sequences out of 15000+600000
+ 27133 strings out of 476025
+ 477164 string characters out of 5790017
+ 1974388 words of memory out of 5000000
+ 47021 multiletter control sequences out of 15000+600000
  523717 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,8n,89p,3236b,2209s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1035,10 +1035,10 @@ e/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/t
 exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on PS02.pdf (7 pages, 238197 bytes).
+Output written on PS02.pdf (8 pages, 236575 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 66 named destinations out of 1000 (max. 500000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 61 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

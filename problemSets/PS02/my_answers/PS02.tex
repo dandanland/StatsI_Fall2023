@@ -102,17 +102,17 @@
 	\vspace{.15cm}
 	\noindent First,let's calculate the expected frequency $f_e = \frac{f_{\text{row total}} \times f_{\text{col total}}}{f_{\text{grand total}}}$. Then we can calculate the $\chi^2$, which is $\chi^2=\sum \frac{{(f_{o} - f_{e})^2}}{f_{e}}=3.791168$\\	
 	
-	\lstinputlisting[language=R,firstline=6,lastline=23,]{P02.R}
+	\lstinputlisting[language=R,firstline=6,lastline=18,]{P02.R}
 	
 	\vspace{.15cm}
 	\noindent Next, we need calculate the degree of freedom: $df=(nrow-1)\times(ncol-1)=2$\\
 	
-	\lstinputlisting[language=R,firstline=25,lastline=26]{P02.R}
+	\lstinputlisting[language=R,firstline=20,lastline=21]{P02.R}
 	
 	\vspace{.15cm}
 	\noindent Last use R function to examine my results:\\
 	
-	\lstinputlisting[language=R,firstline=32,lastline=34]{P02.R}
+	\lstinputlisting[language=R,firstline=27,lastline=29]{P02.R}
 	
 	\begin{verbatim}
 		chisq_result	
@@ -129,7 +129,7 @@
 	\\So we can interpret that, Based on the chi-square test, at a 99$\%$ confidence level, we cannot reject the null hypothesis. Which indicates that we do not have enough evidence to support there is a statistically significant dependence between driver class and whether officers were more or less likely to solicit a bribe from drivers.\\
 	\\Also, we can use R function to calculate p-value:\\
 	
-	\lstinputlisting[language=R,firstline=36,lastline=50]{P02.R}
+	\lstinputlisting[language=R,firstline=32,lastline=34]{P02.R}
 	
 	\newpage
 	\item [(c)] Calculate the standardized residuals for each cell and put them in the table below.
@@ -151,7 +151,7 @@
 	\vspace{.15cm}
 	\noindent Calculate the residuals for each cell by using $\text{residual} = \frac{(f_o - f_e)}{\sqrt{f_e}}$ \\
 	
-	\lstinputlisting[language=R,firstline=53,lastline=55]{P02.R}
+	\lstinputlisting[language=R,firstline=48,lastline=61]{P02.R}
 	
 	\begin{table}[h]
 		\centering
@@ -159,9 +159,9 @@
 			& Not Stopped & Bribe requested & Stopped/given warning \\
 			\\[-1.8ex] 
 			\hline \\[-1.8ex]
-			Upper class  & 0.1360828 & 0.8153742  &  0.818923\\
+			Upper class  & 0.2506402 & 1.938782  &  2.549510\\
 			\\
-			Lower class & -0.1825742 & 1.0939393  & -1.098701  \\
+			Lower class & -0.4582576 & 3.544769  & -4.661392  \\
 			
 		\end{tabular}
 	\end{table}
@@ -201,7 +201,7 @@ Chattopadhyay and Duflo were interested in whether women promote different polic
 	\vspace{.6cm}
 	\item [(b)] Run a bivariate regression to test this hypothesis in \texttt{R} (include your code!).
 	
-	\lstinputlisting[language=R,firstline=77,lastline=83]{P02.R}
+	\lstinputlisting[language=R,firstline=83,lastline=89]{P02.R}
 	
 	\begin{verbatim}
 		lm(formula = data$water ~ reserved_data, data = data)
