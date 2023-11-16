@@ -58,7 +58,7 @@ wb_re <- reshape(wb[, c("country","iso3c","date","indicatorID","value")], # df
                  direction = "wide")
 
 # Load Quality of Government data
-qog <- read_csv("https://www.qogdata.pol.gu.se/data/qog_bas_ts_jan23.csv")
+qog <- read.csv("https://www.qogdata.pol.gu.se/data/qog_bas_ts_jan23.csv")
 
 # How can we combine data from different sources?
 # https://guides.nyu.edu/quant/merge
