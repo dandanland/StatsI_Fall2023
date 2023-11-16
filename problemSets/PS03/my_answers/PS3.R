@@ -136,7 +136,6 @@ summary(regression5)
 # Question 5.2
 # Write the prediction equation
 # voteshare = 0.4486442 + 0.0355431*difflog + 0.2568770*presvote
-# Interpretatin:
 
 # Question 5.3
 # From the regression results of regression5 and regression4, we can see that the Residuals, Coefficients, Residual standard error, Multiple R-squared, Adjusted R-squared, F-statistic and other indicators of regression4 and regression5 are the same.
