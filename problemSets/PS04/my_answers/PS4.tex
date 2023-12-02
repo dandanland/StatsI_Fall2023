@@ -116,7 +116,7 @@ help(Prestige)
 	 \noindent The results of the model as followed: %\vspace{.15cm}
 	 \begin{align*}
 	 	\hat{y} &= \hat{\beta_0} + \hat{\beta_1} \times  \text{income} +  \hat{\beta_2} \times  \text{professional} +  \hat{\beta_3} \times  \text{income} \times \text{professional}\\
-	 	prestige &= 20.804 + 0.003 \times {income} + 38.120 \times {professional} - 0.002 \times {income} \times{professional}
+	 	prestige &= 21.142 + 0.003 \times {income} + 37.781 \times {professional} - 0.002 \times {income} \times{professional}
 	 \end{align*}
 	 
 	\begin{table}[!ht]
@@ -126,18 +126,18 @@ help(Prestige)
 		\begin{tabular}{l c}
 			\hline & Model 1 \\
 			\hline
-			(Intercept)       &$20.804^{***}$\\
-			& $(2.539)$      \\
+			(Intercept)       &$21.142^{***}$\\
+			& $(2.804)$      \\
 			income              & $0.003^{***}$  \\
 			& $(0.000)$      \\
-			professional        & $38.120^{***}$ \\
-			& $(4.080)$      \\
+			professional        & $37.781^{***}$ \\
+			& $(4.248)$      \\
 			income:professional & $-0.002^{***}$ \\
 			& $(0.001)$      \\
 			\hline
-			R$^2$               & $0.789$        \\
-			Adj. R$^2$          & $0.783$        \\
-			Num. obs.           & $102$          \\
+			R$^2$               & $0.787$        \\
+			Adj. R$^2$          & $0.780$        \\
+			Num. obs.           & $98$          \\
 			\hline
 			\multicolumn{2}{l}
 			{\scriptsize{$^{***}p<0.001$;$^{**}p<0.01$;$^{*}p<0.05$}}
@@ -155,7 +155,7 @@ help(Prestige)
 	\item [(e)]
 	Interpret the coefficient for \texttt{professional}.
 	
-		\noindent Holding all other variables constant, being a professional occupation is associated with an increase of 38.120 units in prestige compared to a blue or white worker.
+		\noindent Holding all other variables constant, being a professional occupation is associated with an increase of 37.781 units in prestige compared to a blue or white worker.
 	
 	\item [(f)]
 	What is the effect of a \$1,000 increase in income on prestige score for professional occupations? In other words, we are interested in the marginal effect of income when the variable \texttt{professional} takes the value of $1$. Calculate the change in $\hat{y}$ associated with a \$1,000 increase in income based on your answer for (c).
@@ -182,16 +182,16 @@ help(Prestige)
 	
 	\noindent When one's occupation changes from non-professional to professional, and her income is \$6000. The marginal effect is the amount change of $\hat{y}$ when \texttt{professional} variable changes.\\\\ We need to consider the main effect and the interaction effect of \texttt{professional} on \texttt{prestige}.
 	\begin{align*}
-		\frac{\Delta \text{prestige}}{\Delta \text{professional}} &= 38.120 - 0.002 \times \text{income} \\\\
-		\Delta \hat{y} = \Delta \text{prestige} &=  (38.120 - 0.002 \times \text{income})\times \Delta \text{professional}
+		\frac{\Delta \text{prestige}}{\Delta \text{professional}} &= 37.781 - 0.002 \times \text{income} \\\\
+		\Delta \hat{y} = \Delta \text{prestige} &=  (37.781 - 0.002 \times \text{income})\times \Delta \text{professional}
 	\end{align*}
 	\noindent As we konw above \(\Delta \text{professional}=1-0=1\) and \(\text{income}=6000\) :
 	\begin{align*}
-		\Delta \hat{y} &= (38.120 - 0.002 \times 6000) \times 1 \\
-		&= (38.120 - 12) \\
-		&= 26.120
+		\Delta \hat{y} &= (37.781 - 0.002 \times 6000) \times 1 \\
+		&= (37.781 - 12) \\
+		&= 25.781
 	\end{align*}
-	\noindent So, when one's income is 6000 and her occupation changes from non-professional to professional, the changes in \texttt{prestige} is 26.120 scale points. 
+	\noindent So, when one's income is 6000 and her occupation changes from non-professional to professional, the changes in \texttt{prestige} is 25.781 scale points. 
 \end{enumerate}
 
 \newpage

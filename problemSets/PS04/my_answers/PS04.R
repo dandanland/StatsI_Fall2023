@@ -16,14 +16,14 @@ getwd()
 #####################
 
 # (a) Create a new variable "professional"
-Prestige$professional<-ifelse(Prestige$type %in% c("prof"),1,0)
+Prestige$professional<-ifelse(Prestige$type=="prof",1,0)
 
 # (b) Run a linear model
 # Run a linear model without interaction
 model<-lm(prestige ~ income + professional + income:professional ,data = Prestige)
 
 # (c) Write the prediction equation based on the result
-#texreg(list(model), digits=3)
+texreg(list(model), digits=3)
 # presitge= 20.804 + 0.003*income + 38.120*professional - 0.002*income*professional
 
 # (f) The effect of a $1,000 increase in income on prestige score for professional occupations
